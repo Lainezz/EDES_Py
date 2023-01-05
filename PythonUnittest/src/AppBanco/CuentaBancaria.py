@@ -23,7 +23,7 @@ class CuentaBancaria():
         self.saldo = 0.0
         self.movimientos = list()
 
-        exp_reg_iban = "^[A-Z]{2}\d{22}"
+        exp_reg_iban = "^[A-Z]{2}\d{22}$"
         if re.search(exp_reg_iban, iban):
             self.valida = True
         else:
