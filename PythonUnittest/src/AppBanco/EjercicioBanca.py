@@ -63,7 +63,7 @@ while opcion != 0:
         case 6:
             cantidad = float(input("Inserte la cantidad a retirar: "))
             try:
-                cuenta.ingresar(cantidad)
+                cuenta.retirar(cantidad)
             except CuentaException.CuentaException as cuentaException:
                 print(cuentaException)
             except AvisarHaciendaException.AvisarHaciendaException as haciendaException:

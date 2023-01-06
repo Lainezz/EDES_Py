@@ -7,7 +7,7 @@ class CuentaBancaria():
     iban = None
     titular = None
 
-    saldo = None
+    saldo = 0.0
     movimientos = None
 
     SALDO_MINIMO = -50.0
@@ -38,7 +38,7 @@ class CuentaBancaria():
     def retirar(self, cantidad):
         if cantidad <= 0:
             raise CuentaException.CuentaException("La cantidad a retirar debe ser mayor que 0")
-        return self.operar(-cantidad)
+        return self.operar(-abs(cantidad))
 
     def operar(self, cantidad):
         if self.saldo + cantidad < self.SALDO_MINIMO:
