@@ -12,7 +12,7 @@ const comprobarNota = () => {
   let inputNota = document.querySelector("#inputNota").value;
 
   const reg = /^-?\d*\.{0,1}\d+$/;
-  console.log(typeof inputNota);
+  
   let mensaje;
   
   //Comprueba que lo que se ha introducido en el input corresponde con un número
