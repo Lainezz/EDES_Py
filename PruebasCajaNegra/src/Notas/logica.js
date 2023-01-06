@@ -15,6 +15,7 @@ const comprobarNota = () => {
   console.log(typeof inputNota);
   let mensaje;
   
+  //Comprueba que lo que se ha introducido en el input corresponde con un número
   if (reg.test(inputNota)) {
     inputNota = parseFloat(inputNota);
     
@@ -27,9 +28,10 @@ const comprobarNota = () => {
     } else {
       mensaje = "Error";
     }
-  } else {
+  
+  } else { //Si se introduce otra cosa que no sea un número, imprime un mensaje de error
     alert("Error en el tipo de dato");
-    mensaje = "Error";
+    mensaje = "Error en el tipo de dato";
   }
 
   document.querySelector("#pNota").innerHTML = mensaje;
