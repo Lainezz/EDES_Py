@@ -19,7 +19,7 @@ const comprobarNota = () => {
   if (reg.test(inputNota)) {
     inputNota = parseFloat(inputNota);
     
-    if (inputNota >= 0 && inputNota < 5) {
+    if (inputNota > 0 && inputNota < 5) {
       mensaje = "Suspenso";
     } else if (inputNota >= 5 && inputNota < 10) {
       mensaje = "Aprobado";
